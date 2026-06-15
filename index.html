@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FREE ROBUX GENERATOR</title>
+
+<style>
+body{
+    background:#000;
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
+    overflow:hidden;
+}
+
+h1{
+    margin-top:100px;
+    color:#00ff88;
+    text-shadow:
+        0 0 10px #00ff88,
+        0 0 20px #00ff88,
+        0 0 40px #00ff88;
+}
+
+.neon-btn{
+    padding:18px 40px;
+    font-size:22px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    color:white;
+    background:#00aa55;
+
+    box-shadow:
+        0 0 10px #00ff88,
+        0 0 20px #00ff88,
+        0 0 40px #00ff88;
+}
+
+.neon-btn:hover{
+    transform:scale(1.08);
+}
+
+#bar{
+    width:500px;
+    max-width:90vw;
+    height:35px;
+    border:2px solid white;
+    margin:30px auto;
+}
+
+#progress{
+    width:0%;
+    height:100%;
+    background:#00ff88;
+
+    box-shadow:
+        0 0 10px #00ff88,
+        0 0 20px #00ff88,
+        0 0 40px #00ff88;
+}
+
+#status{
+    font-size:22px;
+}
+
+#spider{
+    display:none;
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%) scale(0);
+    font-size:450px;
+    z-index:99999;
+    transition:transform .25s;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎁 FREE ROBUX GENERATOR 🎁</h1>
+
+<p>Generate 1,000,000 Robux Instantly</p>
+
+<button class="neon-btn" onclick="start()">
+Generate Robux
+</button>
+
+<div id="bar">
+    <div id="progress"></div>
+</div>
+
+<p id="status">Ready...</p>
+
+<div id="spider">🕷️</div>
+
+<script>
+function start(){
+
+    let progress = 0;
+
+    const fill = document.getElementById("progress");
+    const status = document.getElementById("status");
+
+    const timer = setInterval(() => {
+
+        progress++;
+
+        if(progress >= 99){
+
+            progress = 99;
+            clearInterval(timer);
+
+            status.innerText =
+                "Verifying account... 99%";
+
+            setTimeout(() => {
+
+                const spider =
+                    document.getElementById("spider");
+
+                spider.style.display = "block";
+
+                setTimeout(() => {
+                    spider.style.transform =
+                        "translate(-50%,-50%) scale(1)";
+                }, 10);
+
+            }, 1200);
+        }
+
+        fill.style.width = progress + "%";
+
+    }, 40);
+}
+</script>
+
+</body>
+</html>
